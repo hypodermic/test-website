@@ -1,46 +1,13 @@
 
 <html>
   <head>
-  <!-- Incluyendo Culqi Checkout -->
-<script src="https://checkout.culqi.com/js/v3"></script>
-    <script>
-  Culqi.publicKey = 'pk_test_oJmtho5pPAdOttOk';
-</script>
-<script>
-  Culqi.settings({
-    title: 'uniqas Store',
-    currency: 'PEN',
-    description: 'uniqas pack',
-    amount: 6000
-  });
-  $('#buyButton').on('click', function(e) {
-    // Abre el formulario con la configuración en Culqi.settings
-    Culqi.open();
-    e.preventDefault();
-});
-function culqi() {
-  if (Culqi.token) { // ¡Objeto Token creado exitosamente!
-      var token = Culqi.token.id;
-      alert('Se ha creado un token:' + token);
-  } else { // ¡Hubo algún problema!
-      // Mostramos JSON de objeto error en consola
-      console.log(Culqi.error);
-      alert(Culqi.error.user_message);
-  }
-};
-
-</script>
-
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>uniqas</title>
+    <link href="uniqas.css" rel="stylesheet" type="text/css" />
   </head>
-  <title>
-    uniqas test
-  </title>
   <body>
+    <script src="index.js"></script>
     <h1>uniqas</h1>
   </body>
-  <style>
-    body{
-  background-color: pink;
-    }
-  </style>
 </html>
