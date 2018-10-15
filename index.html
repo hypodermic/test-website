@@ -1,5 +1,27 @@
 
 <html>
+  <head>
+  <!-- Incluyendo Culqi Checkout -->
+<script src="https://checkout.culqi.com/js/v3"></script>
+    <script>
+  Culqi.publicKey = 'Aquí inserta tu llave pública';
+</script>
+<script>
+  Culqi.settings({
+    title: 'uniqas Store',
+    currency: 'PEN',
+    description: 'uniqas pack',
+    amount: 6000
+  });
+  $('#buyButton').on('click', function(e) {
+    // Abre el formulario con la configuración en Culqi.settings
+    Culqi.open();
+    e.preventDefault();
+});
+
+</script>
+
+  </head>
   <title>
     uniqas test
   </title>
